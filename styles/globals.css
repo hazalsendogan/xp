@@ -2,8 +2,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -15,6 +13,46 @@ a {
   box-sizing: border-box;
 }
 
+body > div {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 0.5fr;
+  grid-template-rows: 72px minmax(calc(100vh * 3 / 4), auto) 72px;
+}
+.main {
+  margin-top: 1.25rem;
+  grid-column: 2 / 3;
+}
+header,
+footer {
+  grid-column: 1 / 4;
+}
+.window {
+  margin-bottom: 1.25rem;
+}
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+}
+h1 {
+  font-size: 2.25rem;
+}
+h2 {
+  font-size: 1.875rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5 {
+  font-size: 1.125rem;
+}
+h6 {
+  font-size: 1rem;
+}
+p {
+  font-size: 0.875rem;
+}
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
